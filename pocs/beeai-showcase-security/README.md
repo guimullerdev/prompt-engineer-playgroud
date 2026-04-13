@@ -4,24 +4,43 @@ An interactive terminal-based multi-agent demo app built with the [BeeAI Framewo
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.11+ (Python 3.14 recommended — install via `brew install python@3.14`)
 - An OpenAI API key (or compatible provider)
+
+> **Note:** `beeai-framework` requires Python ≥ 3.11. Python 3.9 is **not** supported.
 
 ## Setup
 
 ```bash
-# 1. Clone / navigate to the project
-cd beeai-showcase
+# 1. Navigate to the project directory
+cd pocs/beeai-showcase-security
 
-# 2. Install dependencies
+# 2. Create and activate a virtual environment (use python3.14 or any 3.11+)
+python3.14 -m venv .venv
+source .venv/bin/activate      # macOS / Linux
+# .venv\Scripts\activate       # Windows
+
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 3. Configure environment
+# 4. Configure environment variables
 cp .env.example .env
-# Edit .env and set your OPENAI_API_KEY
+# Open .env and set your OPENAI_API_KEY
 
-# 4. Run
+# 5. Run the app
 python main.py
+```
+
+### macOS — install Python 3.14 via Homebrew
+
+```bash
+brew install python@3.14
+```
+
+### Deactivate the virtual environment when done
+
+```bash
+deactivate
 ```
 
 ## Demo Categories
